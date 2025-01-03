@@ -15,10 +15,10 @@ fetch('https://dummyjson.com/products')
         products.innerHTML +=  
         `<div class="card">
             <img src=${product.thumbnail}  alt="${product.title}" loading="lazy"/>
-            <h5>${product.title}</h5>
+            <h4>${product.title}</h4>
             <p class="product-desc">${product.description}</p>
-            <h4 class="product-desc">${product.price}</h4>
-            <button class="add-product" onclick="addToBag(${product.id})">Add to bag</button>
+            <h5 class="product-desc">${product.price}</h5>
+            <button class="add-product" onclick="addToBag(${product.id})">SHOP NOW</button>
         </div>`
         }
     });
