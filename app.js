@@ -2,9 +2,9 @@ const products = document.getElementById('products')
 let productData = [];
 let storedItem =  JSON.parse(localStorage.getItem("product"))
 let count = document.getElementById('count')
-// if(count && count !== 0){
-// count.innerHTML = storedItem.length
-// }
+if(count && count !== 0){
+count.innerHTML = storedItem.length
+}
 
 fetch('https://dummyjson.com/products')
 .then(res => res.json())
@@ -33,11 +33,17 @@ const addToBag = (itemId)=>{
         if (!Array.isArray(storedItem)) {
             storedItem = [];
         }
+
+        const itemExists = storedItem.some(item => item.id === items.id);
+
+        if (!itemExists) {
         storedItem.push(items)
         localStorage.setItem("product", JSON.stringify(storedItem))
         count.innerHTML = storedItem.length;
+        }else{
+            alert("Item already in cart.");
+        }
 
-        
     }else{
         console.log("Not same");
     }
