@@ -49,8 +49,16 @@ const addToBag = (itemId)=>{
     }
 }
 
+// arrow slider
+let arrowR = document.getElementById('right-arrow')
+console.log("🚀 ~ arrowR:", arrowR)
 
+const moveRight = () =>{
+    alert('refd');
+    // .style.transform = 'translateX(100px)';
+}
 
+arrowR.addEventListener('click', moveRight)
 
 // checkout
 let checkout = document.getElementById('checkout');

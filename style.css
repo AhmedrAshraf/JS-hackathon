@@ -68,6 +68,10 @@ header{
     display: none;
 }
 
+/* new section */
+.text-section{
+    padding: 30px;
+}
 /* products section */
 .heading{
     font-size:40px;
@@ -111,25 +115,85 @@ header{
     background-color: white;
     border: 1px solid #dadada;
 }
-.left-arrow{
-    top: 5%;
+#left-arrow{
+    top: 30%;
     left: 0px;
-    color: white;
     padding: 10px;
+    color: white;
     cursor: pointer;
     position: absolute;
     border-radius: 10px;
     background-color: rgb(0, 106, 155);
 }
-.right-arrow{
-    top: 5%;
+#right-arrow{
+    top: 30%;
     right: 0px;
-    color: white;
     padding: 10px;
+    color: white;
     cursor: pointer;
     position: absolute;
     border-radius: 10px;
     background-color: rgb(0, 106, 155);
+}
+.products-container{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* new section */
+.section-row{
+    width: 100%;
+    gap: 10px;
+    margin-top: 5%;
+    display: flex;
+    align-items:stretch;
+    justify-content: space-around;
+    
+}
+.section-content{
+    width: 40%;
+}
+.section-content p{
+    font-size: 14px;
+    color: gray;
+    line-height: 1.5;
+}
+.section-content button{
+    background-color: rgb(0, 106, 155);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 14px;
+}
+
+.box{
+    width: 200px;
+    border: 1px dashed rgb(40, 96, 120);
+    color:rgb(40, 96, 120) ;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* new section */
+.howWork-img{
+    width: 40%;
+}
+.mt-5{
+    margin-top: 5%;
+}
+.whyWork p{
+    color: black !important;
+}
+
+/* faq */
+.faq-section p{
+    border: 1px solid #dadada;
+    padding: 10px;
+    border-radius: 5px;
 }
 @media screen and (max-width: 700px) {
     .row{
@@ -147,5 +211,19 @@ header{
         display: block !important;
     }
     .card{
-        width: 100% !important;}
+    width: 100% !important;}
+    .box {
+        width: 100%;
+    }
+    .section-row{
+        flex-direction: column-reverse !important;
+    }
+    .section-content {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    .howWork-img{
+        width: 100% !important;
+    }
 }
